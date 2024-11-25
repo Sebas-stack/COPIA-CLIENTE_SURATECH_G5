@@ -1,3 +1,5 @@
+import {buscarPacientes} from "../services/serviciosPaciente.js"
+
 //OBJETIVO: Capturar los datos de un formulario
 
 //1. por cada input, select, textarea del formulario 
@@ -52,64 +54,15 @@ botonRegistroPaciente.addEventListener("click",function(evento){
 
 */
 //OBJETIVO:Recibir datos del BACK y hacerles render (render=PINTARLOS)
-//1. QUEMAR O SIMULAR LOS DATOS
-let pacientes=[
-    {
-        id:890,
-        nombres:"Brad Alexis Gallego",
-        fechaNacimiento:"1989-06-23",
-        ciudad:"Medellin",
-        correo:"bebeshito69@hotmail.com",
-        telefono:"3225962363",
-        ips:"Mayorca sede norte",
-        tienePoliza:true,
-        grupoIngresos:"C",
-        fechaAfiliacion:"2005-10-20"
-    },
-    {
-        "id": 891,
-        "nombres": "Sofía Valentina Pérez",
-        "fechaNacimiento": "1992-03-15",
-        "ciudad": "Bogotá",
-        "correo": "sofia.perez@example.com",
-        "telefono": "3104567890",
-        "ips": "Clínica Santa María",
-        "tienePoliza": true,
-        "grupoIngresos": "B",
-        "fechaAfiliacion": "2010-05-30"
-    },
-    {
-        "id": 892,
-        "nombres": "Diego Alejandro Ruiz",
-        "fechaNacimiento": "1985-11-08",
-        "ciudad": "Cali",
-        "correo": "diego.ruiz@example.com",
-        "telefono": "3159876543",
-        "ips": "Hospital Universitario del Valle",
-        "tienePoliza": false,
-        "grupoIngresos": "A",
-        "fechaAfiliacion": "2012-01-12"
-    },
-    {
-        "id": 893,
-        "nombres": "Camila Isabel Torres",
-        "fechaNacimiento": "1995-07-30",
-        "ciudad": "Barranquilla",
-        "correo": "camila.torres@example.com",
-        "telefono": "3001234567",
-        "ips": "Clínica del Caribe",
-        "tienePoliza": true,
-        "grupoIngresos": "C",
-        "fechaAfiliacion": "2015-09-18"
-    }
-]
-
-
-//2. crear una referencia a una etiqueta html donde vamos a renderizar
+//1. Llamar al api
+buscarPacientes()
+.then(function(respuestaBack){
+    console.log(respuestaBack)
+    //2. crear una referencia a una etiqueta html donde vamos a renderizar
 let fila=document.getElementById("fila")
 
 //3. Se recorren los datos para obtenerlos de forma separada
-pacientes.forEach(function(paciente){
+respuestaBack.forEach(function(paciente){
     console.log(paciente)
     //4 Se crean columnas
     let columna=document.createElement("div")
@@ -121,11 +74,16 @@ pacientes.forEach(function(paciente){
 
     //6 Se crea una etiqueta para poner el nombre
     let nombre=document.createElement("h2")
-    nombre.textContent=paciente.nombres
+    nombre.textContent=paciente.nombre
 
     //PASO FINAL (ORDENANDO LAS CARTAS)
     tarjeta.appendChild(nombre)
     columna.appendChild(tarjeta)
     fila.appendChild(columna)
 
+    })
 })
+
+
+
+

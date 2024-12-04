@@ -332,6 +332,7 @@ body {
                     transition: background-color 0.5s ease, transform 0.3s ease; /* Transición suave */
                     color: black;
                     font-size: 18px;
+<<<<<<< HEAD
                         text-align: center;
                         border-radius: 15px;
                     }
@@ -371,3 +372,14 @@ body {
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     }
     
+=======
+                    text-align: center;
+                    border-radius: 15px;
+                  }
+              
+                  /* Estilo al pasar el mouse */
+                  .service-box:hover {
+                    background-color: #2ecc71; /* Nuevo color */
+                    transform: scale(1.1); /* Efecto de agrandamiento */
+                  }
+>>>>>>> e20b86bc9966cc9c9dbd3ed91eac8295f5410fda

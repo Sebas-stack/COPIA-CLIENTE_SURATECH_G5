@@ -1,6 +1,91 @@
- /* .menu{
-    background-color: #0033A0;
-} */
+ */
+
+                /* Animación para mostrar el formulario de registro desde los lados */
+                .form-section {
+                    animation: slideInFromLeft 1s ease-out forwards;
+                }
+        
+                @keyframes slideInFromLeft {
+                    from {
+                        transform: translateX(-100%);
+                    }
+                    to {
+                        transform: translateX(0);
+                    }
+                }
+        
+                /* Inicialmente ocultar todo el contenido, excepto el formulario */
+                .content-section {
+                    display: none;
+                }
+        
+                /* Estilo para las tarjetas de misión y visión */
+                .mission-vision-card {
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    border-radius: 8px;
+                    background-color: #f9f9f9;
+                    padding: 20px;
+                    text-align: center;
+                    transition: all 0.3s ease;
+                }
+        
+                .mission-vision-card:hover {
+                    transform: translateY(-10px);
+                    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+                }
+        
+                .mission-vision-card h4 {
+                    font-size: 1.5rem;
+                    color: #007BFF;
+                    margin-bottom: 10px;
+                }
+        
+                .mission-vision-card p {
+                    font-size: 1.1rem;
+                    color: #555;
+                }
+        
+                /* Sección de imagen responsiva */
+                .image-section img {
+                    max-width: 100%;
+                    height: auto;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                }
+
+                /*Estilos del formulario enfermendad*/
+
+                
+                h1{
+                    font-family: 'Rubik Dirt', cursive;
+                }
+
+                h3,h2{
+                    font-weight: bold;
+                    font-family: "Quicksand", sans-serif;
+                    font-family: "Share Tech Mono", monospace;
+                }
+
+                .service-box {
+                    width: 300px;
+                    height: 360px;
+                    background-color: #3498db; /* Color inicial */
+                    transition: background-color 0.5s ease, transform 0.3s ease; /* Transición suave */
+                    color: black;
+                    font-size: 18px;
+                    text-align: center;
+                    border-radius: 15px;
+                    }
+                
+                    /* Estilo al pasar el mouse */
+                    .service-box:hover {
+                        background-color: #2ecc71; /* Nuevo color */
+                        transform: scale(1.1); /* Efecto de agrandamiento */
+                    } /* .menu{
+        background-color: #0033A0;
+    } */
+
+
 
 
 
@@ -226,3 +311,63 @@ body {
                     border-radius: 8px;
                     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
                 }
+
+                /*Estilos del formulario enfermendad*/
+
+                
+                h1{
+                    font-family: 'Rubik Dirt', cursive;
+                }
+
+                h3,h2{
+                    font-weight: bold;
+                    font-family: "Quicksand", sans-serif;
+                    font-family: "Share Tech Mono", monospace;
+                }
+
+                .service-box {
+                    width: 300px;
+                    height: 360px;
+                    background-color: #3498db; /* Color inicial */
+                    transition: background-color 0.5s ease, transform 0.3s ease; /* Transición suave */
+                    color: black;
+                    font-size: 18px;
+                        text-align: center;
+                        border-radius: 15px;
+                    }
+                
+                    /* Estilo al pasar el mouse */
+                    .service-box:hover {
+                        background-color: #2ecc71; /* Nuevo color */
+                        transform: scale(1.1); /* Efecto de agrandamiento */
+                    }  
+                    
+                    
+        .testimonial5 {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        border: 1px solid #ccccccc3;
+        border-radius: 10px;
+    }
+    
+    .testimonial5 img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin-right: 20px;
+    }
+    
+    .row {
+        margin-bottom: 20px;
+    }
+    
+    .col-md-4 {
+        padding: 10px;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    

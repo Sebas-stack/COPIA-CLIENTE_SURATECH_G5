@@ -1,0 +1,28 @@
+.form-background {
+    background-color: #f8f9fa00;
+}
+.imagen-Fondo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer {
+    background-color: #1b3450;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+footer a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none; 
+ }
+

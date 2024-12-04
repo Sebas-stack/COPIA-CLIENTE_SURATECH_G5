@@ -97,6 +97,7 @@ buscarPaciente()
         // 8. Agregar los elementos a la tarjeta
         tarjetas.appendChild(nombre);
         tarjetas.appendChild(correo);
+        tarjetas.appendChild(telefono);
         tarjetas.appendChild(estado);
         columna.appendChild(tarjetas);
 

@@ -5,11 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SURATECH</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/styles/estilos.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <link rel="stylesheet" href="./assets/styles/estilos.css">
+    <style>
+        /* Estilos adicionales para ocultar los formularios al inicio */
+        #register-form, #login-form {
+            display: none;
+        }
+        #register-form.active, #login-form.active {
+            display: block;
+        }
+    </style>
 </head>
+
 <body>
 
     <!-- Header y navegación (ocultos inicialmente) -->
@@ -36,9 +46,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#contactoModal">Contactos</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Iniciar Sesión</a>
-                    </li>
                 </ul>
                 <form class="d-flex" role="search" id="search-form">
                     <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar" id="search-input">
@@ -54,6 +61,30 @@
         <section class="banner text-white content-section">
             <div class="row">
                 <div class="col-md-6 animate__animated animate__fadeInLeft">
+                    <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <h2>Agendar Cita</h2>
+                <form id="cita-form" class="shadow-lg border rounded p-4">
+                    <div class="mb-3">
+                        <label for="nombrePaciente" class="form-label">Nombre Completo</label>
+                        <input type="text" class="form-control" id="nombrePaciente" placeholder="Ingresa tu nombre completo" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="fechaCita" class="form-label">Fecha de Cita</label>
+                        <input type="date" class="form-control" id="fechaCita" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="horaCita" class="form-label">Hora de Cita</label>
+                        <input type="time" class="form-control" id="horaCita" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="motivoCita" class="form-label">Motivo de la Cita</label>
+                        <textarea class="form-control" id="motivoCita" placeholder="Motivo de la cita" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Confirmar Cita</button>
+                </form>
+            </div>
+        </div>
                     <h3>SURATECH2</h3>
                     <p>Con SURATECH podrás gestionar
 
@@ -70,109 +101,134 @@
                 </div>
             </div>
         </section>
-
-        <!-- Sección de Imagen, Misión y Visión -->
-        <section class="container form-section">
-            <div class="row justify-content-center">
-                <div class="col-md-8 text-center">
-                    <!-- Imagen personalizada -->
-                    <div class="image-section mb-4">
-                        <img src="assets/img/asegurate de vivir.jpg" alt="Imagen de la página" class="img-fluid">
+        <footer class="footer content-section" id="footer">
+            <p>&copy; 2024 GestionTech. Todos los derechos reservados.</p>
+        </footer>
+    
+    <!-- Sección principal: ¿Por qué elegir SURATECH? y Testimonios -->
+    <section class="container form-section py-4" id="Testimonios" >
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <img src="assets/img/asegurate de vivir.jpg" alt="Imagen de la página" class="img-fluid rounded mb-3">
+                <div class="row mt-4 justify-content-center">
+                    <h2 class="col-12 mb-3 text-primary">¿Por qué elegir SURATECH?</h2>
+                    <div class="col-md-4 mb-3">
+                        <div class="card shadow-sm border-light rounded p-3 text-center">
+                            <i class="fas fa-user-md fa-3x mb-2 text-primary"></i>
+                            <h5>Atención personalizada</h5>
+                            <p class="mb-0">Un equipo de profesionales a tu disposición.</p>
+                        </div>
                     </div>
-
-                    <!-- Misión y Visión en Tarjetas -->
+                    <div class="col-md-4 mb-3">
+                        <div class="card shadow-sm border-light rounded p-3 text-center">
+                            <i class="fas fa-shield-alt fa-3x mb-2 text-primary"></i>
+                            <h5>Seguridad y confidencialidad</h5>
+                            <p class="mb-0">Tus datos están protegidos con las más altas medidas de seguridad.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card shadow-sm border-light rounded p-3 text-center">
+                            <i class="fas fa-clock fa-3x mb-2 text-primary"></i>
+                            <h5>Agilidad y eficiencia</h5>
+                            <p class="mb-0">Accede a tus servicios de salud de forma rápida y sencilla.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <h2 class="col-12 text-primary mb-3">Lo que nuestros clientes dicen</h2>
                     <div class="row">
-                        <!-- Misión -->
-                        <div class="col-md-6 mb-4">
-                            <div class="mission-vision-card">
-                                <h4>Visión</h4>
-                                <p>Ser una plataforma líder en la gestión eficiente de la salud, mejorando la calidad de vida de los pacientes.</p>
+                        <div class="col-md-6 mb-3 d-flex justify-content-center">
+                            <div class="card shadow-sm border-light rounded p-3 text-center">
+                                <div class="d-flex justify-content-center align-items-center mb-3">
+                                    <img src="assets/img/test.jpg" alt="Cliente 1" class="rounded-circle" width="100" height="100">
+                                </div>
+                                <p class="text-muted mb-0">“Gracias a SURATECH, he podido mejorar significativamente mi calidad de vida.” – María López</p>
                             </div>
                         </div>
-
-                        <!-- Visión -->
-                        <div class="col-md-6 mb-4">
-                            <div class="mission-vision-card">
-                                <h4>Misión</h4>
-                                <p>Brindar soluciones tecnológicas innovadoras que faciliten el acceso y la administración de servicios médicos.</p>
+                        <div class="col-md-6 mb-3 d-flex justify-content-center">
+                            <div class="card shadow-sm border-light rounded p-3 text-center">
+                                <div class="d-flex justify-content-center align-items-center mb-3">
+                                    <img src="assets/img/testii.jpg" alt="Cliente 2" class="rounded-circle" width="100" height="100">
+                                </div>
+                                <p class="text-muted mb-0">“El servicio al cliente de SURATECH es excepcional.” – Juan Pérez</p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Formulario de Registro -->
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <h3 class="text-center">Regístrate</h3>
-                    <form class="shadow-lg border rounded p-4" id="registro-form">
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <div class="input-group">
-                                    <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-circle"></i></span>
-                                    <input type="text" class="form-control" placeholder="Nombre Paciente" id="nombre" required>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <div class="input-group">
-                                    <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-vcard"></i></span>
-                                    <input type="text" class="form-control" placeholder="Identificación" id="identificacion" required>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <div class="input-group">
-                                    <span class="input-group-text" id="basic-addon1"><i class="bi bi-calendar-check-fill"></i></span>
-                                    <input type="number" class="form-control" placeholder="Edad" id="edad" required>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <div class="input-group">
-                                    <span class="input-group-text" id="basic-addon1"><i class="bi bi-hospital"></i></span>
-                                    <input type="text" class="form-control" placeholder="IPS" id="ips" required>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <div class="input-group">
-                                    <span class="input-group-text" id="basic-addon1"><i class="bi bi-droplet-fill"></i></span>
-                                    <input type="text" class="form-control" placeholder="Tipo de Sangre" id="sangre" required>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <div class="input-group">
-                                    <span class="input-group-text" id="basic-addon1"><i class="bi bi-at"></i></span>
-                                    <input type="email" class="form-control" placeholder="Correo Electrónico" id="correo" required>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <div class="input-group">
-                                    <span class="input-group-text" id="basic-addon1"><i class="bi bi-lock-fill"></i></span>
-                                    <input type="password" class="form-control" placeholder="Contraseña" id="password" required>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <div class="input-group">
-                                    <span class="input-group-text" id="basic-addon1"><i class="bi bi-lock-fill"></i></span>
-                                    <input type="password" class="form-control" placeholder="Confirmar Contraseña" id="confirm-password" required>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="btn btn-primary mx-auto d-block" type="submit">Enviar</button>
-                    </form>
+                <div class="row mt-2">
+                    <div class="col-12">
+                        <button class="btn btn-primary btn-lg px-4 py-2 rounded-pill shadow-sm" onclick="showRegisterForm()">¡Únete a nosotros!</button>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
+
+    <!-- Sección Formulario de Registro e Inicio de Sesión -->
+    <section class="container form-section py-5" id="Testimonios" >
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <!-- Formulario de Registro -->
+                <div id="register-form">
+                    <h3 class="text-center mb-4 text-primary">Regístrate</h3>
+                    <form class="shadow-lg border border-light rounded p-5" id="registro-form" style="background-color: #f9f9f9;">
+                        <!-- Campos del formulario de registro -->
+                        <div class="row mb-4">
+                            <div class="col-md-6 mb-3">
+                                <input type="text" class="form-control form-control-lg" placeholder="Nombre Paciente" id="nombre" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <input type="text" class="form-control form-control-lg" placeholder="Identificación" id="identificacion" required>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-6 mb-3">
+                                <input type="number" class="form-control form-control-lg" placeholder="Edad" id="edad" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <select class="form-control form-control-lg" id="ips" required>
+                                    <option value="">Selecciona una sede</option>
+                                    <option value="Medellín - Sede 1">Medellín - Sede 1</option>
+                                    <option value="Medellín - Sede 2">Medellín - Sede 2</option>
+                                    <option value="Medellín - Sede 3">Medellín - Sede 3</option>
+                                    <option value="Medellín - Sede 4">Medellín - Sede 4</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-6 mb-3">
+                                <input type="password" class="form-control form-control-lg" placeholder="Contraseña" id="password" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <input type="password" class="form-control form-control-lg" placeholder="Confirmar Contraseña" id="confirm-password" required>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary btn-lg w-50 mx-auto d-block" type="button" onclick="submitRegistration()">Enviar</button>
+                    </form>
+                    <p class="text-center mt-3 text-muted">¿Ya tienes cuenta? <a href="#" onclick="switchToLogin()">Iniciar sesión</a></p>
+                </div>
+
+                <!-- Formulario de Inicio de Sesión -->
+                <div id="login-form">
+                    <h3 class="text-center mb-4 text-primary">Iniciar sesión</h3>
+                    <form class="shadow-lg border border-light rounded p-5" style="background-color: #f9f9f9;" onsubmit="return login()">
+                        <div class="mb-4">
+                            <input type="text" class="form-control form-control-lg" placeholder="Nombre de usuario" id="username" required>
+                        </div>
+                        <div class="mb-4">
+                            <input type="password" class="form-control form-control-lg" placeholder="Contraseña" id="login-password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg w-50 mx-auto d-block">Entrar</button>
+                    </form>
+                    <p class="text-center mt-3 text-muted">¿No tienes cuenta? <a href="#" onclick="switchToRegister()">Regístrate</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
     </main>
 
     <!-- Footer (oculto inicialmente) -->
-    <footer class="footer content-section">
-        <p>&copy; 2024 GestionTech. Todos los derechos reservados.</p>
-    </footer>
+    
 
     <!-- Modales -->
     <!-- Modal "Ver más" -->
@@ -211,39 +267,14 @@
         </div>
     </div>
 
-    <!-- Modal "Iniciar Sesión" -->
-    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="loginModalLabel">Iniciar Sesión</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="login-form">
-                        <div class="mb-3">
-                            <label for="login-email" class="form-label">Correo Electrónico</label>
-                            <input type="email" class="form-control" id="login-email" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="login-password" class="form-label">Contraseña</label>
-                            <input type="password" class="form-control" id="login-password" required>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="contraseña.js"></script>
-    <script src="index.js">
+    <script src="index.js"></script>
+    <script src="inicioSesion.js"></script>
 
-  
-    </script>
+
 </body>
 </html>
 

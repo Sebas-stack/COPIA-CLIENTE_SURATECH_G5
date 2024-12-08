@@ -25,6 +25,35 @@
     display: flex;
     justify-content: space-between;
 } */
+
+
+/*estilos del navegador*/
+.navbar {
+    background-color:#0056b3;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #007bff ;
+    border-radius: 5px;
+}
+
+.navbar-nav .dropdown-menu {
+    background-color: #007bff;
+}
+
+.navbar-nav .dropdown-item {
+    color: white;
+}
+
+.navbar-nav .dropdown-item:hover {
+    background-color: #0056b3;
+}
+
+
 .icon-container i {
     transition: transform 0.3s ease;
 }

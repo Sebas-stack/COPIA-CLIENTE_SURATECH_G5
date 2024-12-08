@@ -22,23 +22,8 @@
 </head>
 <body>
     <header>
-        <!--  Barra de navegación superior -->
-        <div class="container">
-            <div class="container-fluid">
-                <div class="d-flex align-items-center">
-                  <!-- Enlace: Lengua de señas -->
-                  <p>Lengua de Señas</p>
-                  <!-- Línea divisoria -->
-                  <div class=""></div>
-                  <!-- Dropdown de idioma -->
-                  <div class="">
-                    
-                    </ul>
-                  </div>
-                </div>
-              </div>
-        </div>
-    
+        
+                
     <!-- Barra de navegación inferior -->
     <nav class="navbar navbar-expand-lg menu navbar-dark  fixed-top flex-column-reverse">
         <div class="container-fluid">
@@ -47,7 +32,8 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse d-flex align-items-end" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 mt-5">
+              
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Servicios
@@ -60,10 +46,23 @@
                     <li><a class="dropdown-item" href="/src/view/paciente.html" target="_blank"><i class="bi bi-person-lines-fill"></i> Paciente</a></li>
                 </ul>
               </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Historial Clinico Paciente
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="../view/dashboars/dashboarsclientes.html" target="_blank"><i class="bi bi-person-fill"></i> Información paciente</a></li>
+                    <li><a class="dropdown-item" href="../view/dashboars/dashboarsenfermedad.html" target="_blank"><i class="bi bi-pills"></i> Enfermedades paciente</a></li>
+                    <li><a class="dropdown-item" href="../view/dashboars/dashboarsignoVital.html" target="_blank"><i class="bi bi-heart-pulse">Signos vitales paciente</i></a></li>
+                    <li><a class="dropdown-item" href="../view/dashboars/dashboarsmedicamento.html" target="_blank"><i class="bi bi-thermometer"></i> Medicamentos paciente</a></li>
+                    <li><a class="dropdown-item" href="../view/dashboars/dashboarsmedico.html" target="_blank"><i class="bi bi-person-lines-fill"></i> Medico que atiende</a></li>
+                </ul>
+              </li>
               <li class="nav-item">
                 <a class="nav-link disabled" aria-disabled="true">Contacto</a>
               </li>
-            </ul>
+           
             <form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
               <button class="btn btn-outline-light" type="submit">Buscar</button>
@@ -75,7 +74,7 @@
 
     <!--Banner ppal Formulario -->
 
-    <p align="center">Registro enfermedades:</p>
+    <p class="text-center mt-5">Registro enfermedades:</p>
         <h1 class="my-5 d-flex justify-content-center animate__animated animate__backInDown">Tu salud nuestra prioridad</h1>
 
         <div class="container text-center mt-0">
@@ -107,11 +106,11 @@
                 <div class="col-md-6 col-12 image-container text-center">
                     <img src="../../assets/img/enfermedad.jpg" width="350px" alt="Imagen de ejemplo" class="img-fluid">
                   </div>
-                <div class="col-md-6 col-12">
-                    <h4 class="m-5">Registra aqui las enfermedades padecidad : </h4>
+                <div class="col-md-6 col-12 ">
+                    <h4 class="m-5">Registra las enfermedades padecidas aquí </h4>
                     
                     <form class="p-5 border rounded shadow bg-info">
-                        <div class="row">
+                        <div class="row ">
                             <div class="col-6">
                                 <label class="form-label">Nombres:</label>
                                 <input type="text" class="form-control" id="nombreenfermedad">

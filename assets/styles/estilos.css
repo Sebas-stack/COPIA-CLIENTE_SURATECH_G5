@@ -85,17 +85,14 @@
         background-color: #0033A0;
     } */
 
-
-
-
-
-
 body {
     font-family: Arial, sans-serif;
 }
 
 .navbar {
+    height: 60PX;
     background-color:#0056b3;
+
 }
 
 .navbar-nav .nav-link {
@@ -117,6 +114,10 @@ body {
 
 .navbar-nav .dropdown-item:hover {
     background-color: #0056b3;
+}
+
+.img-banner img{
+    margin-top: 150px;
 }
 
 .banner {
@@ -316,22 +317,36 @@ body {
 
                 
                 h1{
-                    font-family: 'Rubik Dirt', cursive;
-                }
-
-                h3,h2{
+                    font-family: "Barlow", sans-serif;
+                    font-weight: 400;
+                    font-style: normal;
+                    color: rgb(29, 108, 160);
                     font-weight: bold;
-                    font-family: "Quicksand", sans-serif;
-                    font-family: "Share Tech Mono", monospace;
                 }
 
-                .service-box {
-                    width: 300px;
-                    height: 360px;
-                    background-color: #3498db; /* Color inicial */
-                    transition: background-color 0.5s ease, transform 0.3s ease; /* Transición suave */
-                    color: black;
-                    font-size: 18px;
+                
+                h3,h2{
+                    font-family: "Barlow", sans-serif;
+                    font-weight: 400;
+                    font-style: normal;
+                    color: rgb(29, 108, 160);
+                    font-weight: bold;
+                }
+
+                h4{
+                    font-family: "Barlow", sans-serif;
+                    font-weight: 400;
+                    font-style: normal;
+                    color: rgb(29, 108, 160);
+                    font-weight: bold;
+                    
+        
+
+                form, .form-select{
+                    color: blue;
+                }
+
+               
 <<<<<<< HEAD
                         text-align: center;
                         border-radius: 15px;

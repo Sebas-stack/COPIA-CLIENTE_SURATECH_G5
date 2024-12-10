@@ -24,8 +24,45 @@ buscarSignoVital()
         let nombre = document.createElement("h2")
         nombre.textContent=signoVital.nombre
 
+        let valores = document.createElement("h2")
+        valores.textContent=signoVital.valores
+
+        let fechaMedida = document.createElement("h2")
+        fechaMedida.textContent=signoVital.fechaMedida
+
+
+         // 7. Asignar el color del badge según el campo "grupoIngresos" o el estado
+         let estado = document.createElement("span");
+         estado.classList.add("badge", "rounded-pill", "text-white");
+ 
+         // Asignamos colores según el valor de "grupoIngresos"
+         switch(paciente.grupoIngresos) {
+            case "Urgente":
+                estado.classList.add("bg-urgente");
+                estado.textContent = "Urgente";
+                break;
+            case "Estable":
+                estado.classList.add("bg-estable");
+                estado.textContent = "Estable";
+                break;
+            case "Recuperacion":
+                estado.classList.add("bg-recuperacion");
+                estado.textContent = "Recuperación";
+                break;
+            case "En tratamiento":
+                estado.classList.add("bg-en-tratamiento");
+                estado.textContent = "En tratamiento";
+                break;
+            default:
+                estado.classList.add("bg-secondary");
+                estado.textContent = "Desconocido";  // Valor por defecto si no se encuentra un valor conocido
+                break;
+        }
+
         //paso final (ORDENANDO LAS CARTAS)
         tarjetas.appendChild(nombre)
+        tarjetas.appendChild(valores)
+        tarjetas.appendChild(fechaMedida)
         columna.appendChild(tarjetas)
         fila.appendChild(columna) 
     })

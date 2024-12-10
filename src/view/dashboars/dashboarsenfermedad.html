@@ -16,40 +16,55 @@
     <title>Formulario Signos Vitales</title>
 </head>
 <body>
-    <header>
-        <!--Barra de Navegador-->
-    <nav class="navbar navbar-expand-lg menu navbar-dark  fixed-top flex-column-reverse">
-        <div class="container-fluid">
-          <img src="../../../assets/img/logotipo.png" alt="logo" width="70" height="70">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse d-flex align-items-end" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Servicios
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="/src/view/medico.html" target="_blank"><i class="bi bi-person-fill"></i> Médico</a></li>
-                    <li><a class="dropdown-item" href="/src/view/medicamento.html" target="_blank"><i class="bi bi-pills"></i> Medicamentos</a></li>
-                    <li><a class="dropdown-item" href="/src/view/signoviltal.html" target="_blank"><i class="bi bi-heart-pulse"></i> Signos Vitales</a></li>
-                    <li><a class="dropdown-item" href="/src/view/enfermedad.html" target="_blank"><i class="bi bi-thermometer"></i> Enfermedades</a></li>
-                    <li><a class="dropdown-item" href="/src/view/paciente.html" target="_blank"><i class="bi bi-person-lines-fill"></i> Paciente</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Contacto</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-              <button class="btn btn-outline-light" type="submit">Buscar</button>
-            </form>
-          </div>
+
+    <!--Barra de navegacion-->
+  <header>
+    <nav class="navbar navbar-expand-lg menu navbar-dark fixed-top">
+      <div class="container-fluid">
+        <img src="../../assets/img/logotipo.png" alt="logo" width="60" height="60">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Contacto</a>
+            </li>
+           
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Servicios
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/src/view/medico.html" target="_blank"><i class="bi bi-person-fill"></i> Médico</a></li>
+              <li><a class="dropdown-item" href="/src/view/medicamento.html" target="_blank"><i class="bi bi-pills"></i> Medicamentos</a></li>
+              <li><a class="dropdown-item" href="/src/view/signoviltal.html" target="_blank"><i class="bi bi-heart-pulse"></i> Signos Vitales</a></li>
+              <li><a class="dropdown-item" href="/src/view/enfermedad.html" target="_blank"><i class="bi bi-thermometer"></i> Enfermedades</a></li>
+              <li><a class="dropdown-item" href="/src/view/paciente.html" target="_blank"><i class="bi bi-person-lines-fill"></i> Paciente</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Historial Clinico Paciente
+              </a>
+              <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="../view/dashboars/dashboarsclientes.html" target="_blank"><i class="bi bi-person-fill"></i> Información paciente</a></li>
+                  <li><a class="dropdown-item" href="../view/dashboars/dashboarsenfermedad.html" target="_blank"><i class="bi bi-pills"></i> Enfermedades paciente</a></li>
+                  <li><a class="dropdown-item" href="../view/dashboars/dashboarsignoVital.html" target="_blank"><i class="bi bi-heart-pulse">Signos vitales paciente</i></a></li>
+                  <li><a class="dropdown-item" href="../view/dashboars/dashboarsmedicamento.html" target="_blank"><i class="bi bi-thermometer"></i> Medicamentos paciente</a></li>
+                  <li><a class="dropdown-item" href="../view/dashboars/dashboarsmedico.html" target="_blank"><i class="bi bi-person-lines-fill"></i> Medico que atiende</a></li>
+              </ul>
+            </li>
+            
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+            <button class="btn btn-outline-light" type="submit">Buscar</button>
+          </form>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
+  </header><br><br>
 
         <!--Banner principal Formulario-->
     <main>
@@ -96,39 +111,55 @@
 
          <!-- Pintar tarjetas de Enfermedades -->
 
-        <section class="container text-center">
-            <h3 class="mb-4">Detalles de las Enfermedades : </h3>
+        <section class="container my-5">
+            <h4 class="mb-4">Detalles de las Enfermedades : </h4>
             <div class="row row-cols-1 row-cols-md-3 g-5" id="fila">
                 <!-- Las tarjetas de pacientes se agregarán aquí -->
             </div>
         </section>
     </main><br><br>  
-    
-     <!--TABLA Para pintar los datos de enfermedades que agregue el paciente-->
 
-     <div class="container my-5">
-        <div class="row ">
-          <div class="col-12 d-flex ">
-            <table class="table records text-center">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Nombre Enfermedad</th>
-                  <th>Síntomas</th>
-                  <th>Clasificación</th>
-                  <th>Probabilidad de vida</th>
-                  <th>Grado de enfermedad</th>
-                </tr>
-              </thead>
-              <tbody>
-                <!-- Aquí se llenarán las filas de la tabla -->
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-       
-    </main>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Distancia Reducida</title>
+  <style>
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 5px; /* Espacio reducido entre los contenedores */
+      height: 100vh;
+    }
+
+    .column {
+      flex: 1;
+      padding: 10px;
+      background-color: #f0f0f0; /* Color de fondo para visualizar mejor */
+      border: 1px solid #ccc; /* Borde para distinguir */
+    }
+
+    .divider {
+      width: 1px;
+      background-color: #000;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="column">
+      <p>Contenido de la columna izquierda</p>
+    </div>
+    <div class="divider"></div>
+    <div class="column">
+      <p>Contenido de la columna derecha</p>
+    </div>
+  </div>
+
+
 
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

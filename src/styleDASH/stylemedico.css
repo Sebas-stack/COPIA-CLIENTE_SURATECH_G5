@@ -7,6 +7,10 @@
 /* .form-container:hover {
     transform: translateY(-10px);
 } */
+
+.body{
+    margin-top: 50px;
+}
 .form-label{
     font-size: large;
     color: black;
@@ -42,6 +46,40 @@ h3::before {
     content: url(../../assets/img/icons8-doctor-50.png);
     margin-right: 10px;
     vertical-align: middle;
+}
+/*estilos del navegador*/
+.navbar {
+    height: 70px;
+    background-color:#0056b3;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #007bff ;
+    border-radius: 5px;
+}
+
+.navbar-nav .dropdown-menu {
+    background-color: #007bff;
+}
+
+.navbar-nav .dropdown-item {
+    color: white;
+}
+
+.navbar-nav .dropdown-item:hover {
+    background-color: #0056b3;
+}
+
+.titulo{
+  margin-top: 100px;
+}
+
+img{
+    margin: 0;
 }
 
 

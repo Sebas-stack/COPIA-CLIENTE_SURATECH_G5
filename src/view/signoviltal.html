@@ -40,6 +40,19 @@
               <li><a class="dropdown-item" href="/src/view/paciente.html" target="_blank"><i class="bi bi-person-lines-fill"></i> Paciente</a></li>
               </ul>
             </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Historial Clinico Paciente
+              </a>
+              <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="../view/dashboars/dashboarsclientes.html" target="_blank"><i class="bi bi-person-fill"></i> Información paciente</a></li>
+                  <li><a class="dropdown-item" href="../view/dashboars/dashboarsenfermedad.html" target="_blank"><i class="bi bi-pills"></i> Enfermedades paciente</a></li>
+                  <li><a class="dropdown-item" href="../view/dashboars/dashboarsignoVital.html" target="_blank"><i class="bi bi-heart-pulse">Signos vitales paciente</i></a></li>
+                  <li><a class="dropdown-item" href="../view/dashboars/dashboarsmedicamento.html" target="_blank"><i class="bi bi-thermometer"></i> Medicamentos paciente</a></li>
+                  <li><a class="dropdown-item" href="../view/dashboars/dashboarsmedico.html" target="_blank"><i class="bi bi-person-lines-fill"></i> Medico que atiende</a></li>
+              </ul>
+            </li>
             
           <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
@@ -52,7 +65,7 @@
 
    <!--Banner principal Formulario-->
   <main>
-    <h1 class="my-3 text-danger text-center my-5">Tomas de signos vitales</h1> 
+    <h1 class="my-3 text-center my-5">Tomas de signos vitales</h1> 
       <section class="container my-5 text-center">
           <div class="row justify-content-center">
              
@@ -82,13 +95,14 @@
           </div>
       </section>
       <section class="container-fluid menu">
-          <div class="row justify-content-center p-5">
+          <div class="row justify-content-center">
               <div class="col-sm-12 col-md-5">
                   <img src="../../assets/img/vecteezy_full-human-body-anatomy-3d-rendering-anatomical-drawing_24320547.png"  height="300" alt="" class="img.fluid mx-auto d-block">
               </div>
+              
               <div class="col-sm-12 col-md-5  text-black border--start align-self-center">
-                  <h3 align="center">REGISTRA TUS SIGNOS VITALES</h3>
-                  <form class="bg-info mb-3 rounded-5 border-black shadow-lg">
+                <h4 align="center">Registra los signos vitales aqui</h4><br>
+                  <form class=" p-5 mb-3 rounded-2 border-primary shadow bg-info">
                     <div class="mb-3">
                       <select class="form-select" id="nombresignovital">
                           <option selected>Selecciona la opcion</option>
@@ -116,10 +130,10 @@
               </div>
             </div>
       </section>
-  </main>
+  </main> <br><br><br><br>
 
     <!--Footer-->
-    <footer class="bg-dark text-light text-center py-4">
+    <footer class="bg-dark text-light text-center py-4 my-5">
       <div class="container">
           <p class="mb-2">© 2024 Todos los derechos reservados</p>
           <div>

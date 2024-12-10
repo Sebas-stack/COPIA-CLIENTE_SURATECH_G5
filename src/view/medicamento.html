@@ -9,14 +9,92 @@
     <link rel="stylesheet" href="../styleDASH/stylemedicamento.css">
 </head>
 <body>
-    <main>
-        <img src="../../assets/img/fondomedicamento.jpg" alt="imagen-Fondo" class="imagen-Fondo">
+     
+    <!--Barra de navegacion-->
+  <header>
+    <nav class="navbar navbar-expand-lg menu navbar-dark fixed-top">
+      <div class="container-fluid">
+        <img src="../../assets/img/logotipo.png" alt="logo" width="60" height="60">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Contacto</a>
+            </li>
+           
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Servicios
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/src/view/medico.html" target="_blank"><i class="bi bi-person-fill"></i> Médico</a></li>
+              <li><a class="dropdown-item" href="/src/view/medicamento.html" target="_blank"><i class="bi bi-pills"></i> Medicamentos</a></li>
+              <li><a class="dropdown-item" href="/src/view/signoviltal.html" target="_blank"><i class="bi bi-heart-pulse"></i> Signos Vitales</a></li>
+              <li><a class="dropdown-item" href="/src/view/enfermedad.html" target="_blank"><i class="bi bi-thermometer"></i> Enfermedades</a></li>
+              <li><a class="dropdown-item" href="/src/view/paciente.html" target="_blank"><i class="bi bi-person-lines-fill"></i> Paciente</a></li>
+              </ul>
+            </li>
 
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Historial Clinico Paciente
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="../view/dashboars/dashboarsclientes.html" target="_blank"><i class="bi bi-person-fill"></i> Información paciente</a></li>
+                    <li><a class="dropdown-item" href="../view/dashboars/dashboarsenfermedad.html" target="_blank"><i class="bi bi-pills"></i> Enfermedades paciente</a></li>
+                    <li><a class="dropdown-item" href="../view/dashboars/dashboarsignoVital.html" target="_blank"><i class="bi bi-heart-pulse">Signos vitales paciente</i></a></li>
+                    <li><a class="dropdown-item" href="../view/dashboars/dashboarsmedicamento.html" target="_blank"><i class="bi bi-thermometer"></i> Medicamentos paciente</a></li>
+                    <li><a class="dropdown-item" href="../view/dashboars/dashboarsmedico.html" target="_blank"><i class="bi bi-person-lines-fill"></i> Medico que atiende</a></li>
+                </ul>
+              </li>
+            
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+            <button class="btn btn-outline-light" type="submit">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header><br><br><br><br><br>
+       
+   <!--Banner principal Formulario-->
+
+        <p align="center">Registro medicamentos:</p>
+        <h1 class="my-5 d-flex justify-content-center animate__animated animate__backInDown">Tu salud nuestra prioridad</h1>
+
+        <div class="container text-center mt-0">
+            <h3 class=" m-0 font-weight-bold animate__animated animate__backInLeft"> Para el tratamiento médico sigue las Instrucciones del Médico...</h3><br><br><br>
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <div class="service-box p-5 rounded-4">
+                        <img src="../../assets/img/medicamento1.webp" width="80" height="80" class="service-icon" alt="Arrendamientos"> <br><br> <br>
+                        <h3 class=" animate__animated animate__backInUp text-light">Lee cuidadosamente las etiquetas</h3>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-box  p-5 rounded-4">
+                        <img src="../../assets/img/medicamento.png" width="110" height="100" class="service-icon" alt="Hipotecas"> <br><br><br>
+                        <h3 class=" animate__animated animate__backInUp text-light">Respeta la dosis recomndada</h3>
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="service-box  p-5 rounded-4">
+                        <img src="../../assets/img/medicamento3.webp" width="110" height="100px" class="service-icon" alt="Ventas"> <br><br><br>
+                        <h3 class=" animate__animated animate__backInUp text-light"> Ten presente la frecuencia</h3  >
+                    </div>
+                </div>
+            </div>
+        </div>
+
+     <!--Formulario -->
+    <main>
         <section class="container">
             <div class="row justify-content-center align-items-center">
                 <div class="col-12 col-md-8">
-                    <h3 class="text-center mb-6">Registro de Medicamentos</h3>
-                    <form class="p-4 border rounded shadow form-background">
+                    <h3 class="text-center mb-6">Registra los de Medicamentos aquí</h3>
+                    <form class="p-4 border rounded shadow form-background bg-info">
                         <div class="row">
                             <div class="col-6">
                                 <label class="form-label">Nombre:</label>
